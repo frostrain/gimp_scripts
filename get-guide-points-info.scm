@@ -1,3 +1,7 @@
+;; 这个脚本可以返回 当前图像 当前图层中 所有辅助线交叉点的 坐标 和 颜色
+;; 脚本会在 Scripts 菜单里面注册一个 display-guide-points-info 按钮
+;; 使用多个辅助线在图片上创造交叉点, 然后选择需要取色的图层, 点击该按钮即可看到信息
+
 ;; 返回 所有辅助线的id 的列表
 (define (get-gids image-id)
   (define gids '())
@@ -119,5 +123,5 @@
 
 ;; 在菜单上注册
 ;; 第二个参数是注册的菜单位置, <Image> 是根路径
-;; 注册后可以在 File -> Create -> Text 里面找到一个 Text Box 的按钮
+;; 注册后可以在 Scripts 里面找到一个 display-guide-points-info 的按钮
 (script-fu-menu-register "display-guide-points-info" "<Image>/Scripts")
